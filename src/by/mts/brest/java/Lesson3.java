@@ -7,20 +7,22 @@ public class Lesson3 {
 
         int i;
         for(i = 0; i < 10; i++) {
-            System.out.println("while: "+i);
+            System.out.print(" for:"+i);
         }
 
+        System.out.println("");
+        i = 0;
         while(i<10) {
-            System.out.println("while: "+i);
+            System.out.print(" while:"+i);
             i++;
         }
 
-        do...while
+        /*do...while*/
 
 
 
 
-        System.out.println("1");
+        System.out.println(" END");
 
 
     }
