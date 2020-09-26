@@ -1,7 +1,5 @@
 package by.mts.brest.java;
 
-import java.security.Permission;
-
 public class Lesson3 {
     public static void main(String[] args) {
 
@@ -17,7 +15,6 @@ public class Lesson3 {
             i++) {
             System.out.print(" for:"+i);
         }
-
         System.out.println("");
 
         i = 0;  // Этот while эквивалентен for'у выше
@@ -25,13 +22,19 @@ public class Lesson3 {
             System.out.print(" while:"+i);
             i++;
         }
+        System.out.println("");
 
-        i = 0;
+        i = 0;  // do{} while() хотябы
         do {
-            System.out.print(" do_while:" + i);
+            System.out.print(" do_while:" + i+(i==9?"\n":""));
             i++;
         } while (i < 10);
 
         System.out.println(" END");
+        System.out.print(" END\n");
+        System.out.print(" END\\n");
+        System.out.print(" END123");
+
+
     }
 }
