@@ -24,17 +24,27 @@ public class Lesson3 {
         }
         System.out.println("");
 
+        i = 0;  // Этот while эквивалентен for'у выше
+        while(i < 10) {
+            System.out.print(" while:"+i);
+            if(i == 7) break;   // Прерывает весь цикл
+            i++;
+            // if(i == 7) continue;
+            // Продолжает цикл с этого места
+            // (без выполнения того что после этой строчки)
+        }
+
         i = 0;  // do{} while() хотябы
         do {
             System.out.print(" do_while:" + i+(i==9?"\n":""));
             i++;
         } while (i < 10);
 
-        System.out.println(" END");
+
+/*        System.out.println(" END");
         System.out.print(" END\n");
         System.out.print(" END\\n");
-        System.out.print(" END123");
-
-
+        System.out.print(" C:\\Program files\\dsfdsfds");
+        System.out.print(" END123");*/
     }
 }
