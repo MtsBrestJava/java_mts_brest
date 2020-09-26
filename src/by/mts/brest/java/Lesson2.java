@@ -108,6 +108,10 @@ public static void main(String[] args) {
 
         /*System.out.printf("A is here %i and there %i",a,b);*/
 
+        a*=c;
+        a *= b * c + d;
+        a = a * (b * c + d);
+
         System.out.println("End of program");
     }
 }
