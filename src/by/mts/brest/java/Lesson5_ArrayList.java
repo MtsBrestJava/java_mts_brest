@@ -1,6 +1,8 @@
 package by.mts.brest.java;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Lesson5_ArrayList {
     public static void main(String[] args) {
@@ -28,8 +30,14 @@ public class Lesson5_ArrayList {
         System.out.println("someIntsINDEXED[3] = " + someInts.get(2)); // получает 2-й элемент из списка
         System.out.println("someInts = " + someInts.indexOf(99)); // ищет первое совпадение числа в списке (возвращает индекс в массиве)
         System.out.println("someInts = " + someInts.indexOf(999)); // не находит число, возвращает -1
-        System.out.println("someInts = " + someInts.size()); // не находит число, возвращает -1
-
+        System.out.println("someInts = " + someInts.size()); // возвращает размер списка
+        someInts.set(3,22);     // заполнили 3-й элемент числом (иначе при null - ошибка)
+        System.out.println("someInts unsorted = " + someInts); //
+        Collections.sort(someInts);
+        System.out.println("someInts sorted = " + someInts); // сортировака в порядке возрастания
+        Collections.sort(someInts, Collections.reverseOrder());
+        System.out.println("someInts sorted = " + someInts); // сортировака в порядке убывания
+        System.out.println("someInts sorted = " + Collections.max(someInts)); // возвращаем максимальное значение
 
     }
 }
