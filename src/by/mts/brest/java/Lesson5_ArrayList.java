@@ -6,8 +6,8 @@ public class Lesson5_ArrayList {
     public static void main(String[] args) {
 
         // Список<типДанных> ИмяСписка = new Список<типДанных>()
-        ArrayList<Integer> someInts = new ArrayList<Integer>();
-        ArrayList<ArrayList<Integer>> someInts2 = new ArrayList<ArrayList<Integer>>();
+        ArrayList<Integer> someInts = new ArrayList<Integer>(); //1мерн
+        ArrayList<ArrayList<Integer>> someInts2 = new ArrayList<ArrayList<Integer>>(); //2мерн
 
         someInts.add(55);
         someInts.add(12);
@@ -19,6 +19,7 @@ public class Lesson5_ArrayList {
         System.out.println("someInts = " + someInts);
         someInts.remove(1);
         System.out.println("someInts = " + someInts);
+        
 
     }
 }
