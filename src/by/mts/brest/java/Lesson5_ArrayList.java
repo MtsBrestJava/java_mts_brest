@@ -39,5 +39,9 @@ public class Lesson5_ArrayList {
         System.out.println("someInts sorted = " + someInts); // сортировака в порядке убывания
         System.out.println("someInts sorted = " + Collections.max(someInts)); // возвращаем максимальное значение
 
+
+
+
+
     }
 }

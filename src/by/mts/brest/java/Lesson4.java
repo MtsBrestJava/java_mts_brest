@@ -34,6 +34,7 @@ public class Lesson4 {
         String strings_array2[] = new String[5];
         System.out.println("strings_array2 massive: "+ Arrays.toString(strings_array2));
 
+
         System.out.println("dlina1 : "+ strings_array2.length);
         for(int z=0; z < strings_array2.length; z++) {      // Заполнение пустого массива
             strings_array2[z] = "Stroka" + Integer.toString(z);
