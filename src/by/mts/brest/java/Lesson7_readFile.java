@@ -8,9 +8,11 @@ public class Lesson7_readFile {
         // Читаем файл (можно простым FileReader, но тогда файл посимвольно читается)
         BufferedReader reader =
                 new BufferedReader(new FileReader("C:\\my\\file1.txt"));
+        //FileReader reader = new FileReader("C:\\my\\file1.txt");
 
             System.out.println("stroka1 = " + reader.readLine());   // Выводим первую строчку с файла в консоль
             System.out.println("stroka2 = " + reader.readLine());   // ... вторую
+            System.out.println("stroka3 = " + (char)reader.read());   // ... третюю???
             // ... for()? while()?
         reader.close();     // Закрываем файл
 
