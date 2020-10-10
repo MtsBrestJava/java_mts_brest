@@ -23,7 +23,12 @@ public class job1 {
             someName.add(someString);       // Добавляем введенную строку someString в массив someName
 
             System.out.printf("Input a oklad: ");
-            int num = in.nextInt(); // Ожидаем ввод ЧИСЛА, пишем его в num
+            int num = 0;
+            while(num < 1) {        // Зарплата не должна быть равна 0 или меньше
+                num = in.nextInt(); // Ожидаем ввод ЧИСЛА, пишем его в num
+                if(num < 1)
+                    System.out.printf("Oklad ne dolzhen byt' <= 0, vvedite oklad: ");
+            }
             System.out.printf("Your oklad: %d \n", num);
             // printf - вывод с маской (%d - вывод целочисленного значение далее указанной переменной num
             in.nextLine();      // "Съедаем" ENTER
