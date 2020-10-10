@@ -10,11 +10,6 @@ public class Lesson7_readFile {
                 new BufferedReader(new FileReader("C:\\my\\file1.txt"));
         //FileReader reader = new FileReader("C:\\my\\file1.txt");
 
-            char one = '1';
-            int odin = 1;
-
-
-
             System.out.println("stroka1 = " + reader.readLine());   // Выводим первую строчку с файла в консоль
             System.out.println("stroka2 = " + reader.readLine());   // ... вторую
             System.out.println("stroka3 = " + (char)reader.read());   // ... ТОЛЬКО первый символ из третей строки
@@ -22,7 +17,8 @@ public class Lesson7_readFile {
         reader.close();     // Закрываем файл
 
         // Создаем файл
-        String name1 = "C:\\my\\file2.txt";
+        String name1 = "C:\\my2\\my222\\file2.txt";
+        new File(name1).getParentFile().mkdirs();
         FileWriter writer = new FileWriter(name1);
         writer.write("aaaaaa8888"+System.getProperty("line.separator"));   // Записываем в файл строки
         writer.write("333333"+System.getProperty("line.separator"));
