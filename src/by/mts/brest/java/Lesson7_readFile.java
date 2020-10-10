@@ -1,6 +1,8 @@
 package by.mts.brest.java;
 
 import java.io.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Lesson7_readFile {
     public static void main(String[] args) throws IOException {
@@ -17,7 +19,7 @@ public class Lesson7_readFile {
         reader.close();     // Закрываем файл
 
         // Создаем файл
-        String name1 = "C:\\my2\\my222\\file2.txt";
+        String name1 = "C:\\my\\my_"+ LocalDate.now().toString()+"\\file2.txt";
         new File(name1).getParentFile().mkdirs();
         FileWriter writer = new FileWriter(name1);
         writer.write("aaaaaa8888"+System.getProperty("line.separator"));   // Записываем в файл строки
