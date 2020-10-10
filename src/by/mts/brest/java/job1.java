@@ -1,82 +1,46 @@
 package by.mts.brest.java;
 
-class home {
-    public static void main(String[] args) {
-        int jk;
-        jk = 0;
-        while(jk<10) {
-            System.out.print(" while:" + jk);
-            jk++;
-        }
-
-        System.out.println("  ");
-        System.out.println("massivy:");
-
-
-        int[] nums = new int[4];
-// устанавливаем значения элементов массива
-        nums[0] = 1;
-        nums[1] = 2;
-        nums[2] = 4;
-        nums[3] = 100;
-
-        for (int i=0; i<=nums.length-1; i++)
-            System.out.print(" " +nums[i]);
-        System.out.println(" ");
-        System.out.println("Трёхмерный массив");
-
-        int[][][] nums3;
-        nums3 = new int[4][4][4];
-        for (int i = 0; i < nums3.length; i++){
-            System.out.println("");
-            for(int j=0; j < nums3[i].length; j++){
-                System.out.println("");
-                for (int k=0; k < nums3[j].length; k++) {
-                    nums3[i][j][k]=k+j+i;
-                    System.out.print(nums3[i][j][k]);}
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-package by.mts.brest.java;
-
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
 
 public class job1 {
     public static void main(String[] args) {
-        int i = 0;
-        int nash_massive4 [] = new int [i+6];
-        for (i=0;i<6;i++){
-            nash_massive4[i]=i+20;
-            System.out.println("nash_massive4: "+ Arrays.toString(nash_massive4));}
+        String someString;  // Объявляем строку с именем 'someString'
+        // Объявляем два массива (числовой и строчный)
+        ArrayList<Integer> someInts = new ArrayList<Integer>();
+        ArrayList<String> someName = new ArrayList<String>();
 
-        String string_array1[] = new String[5];
-        for (i=0;i<5;i++){
-            string_array1[i]="i+20";
-            System.out.println("string_array1: "+ Arrays.toString(string_array1));}
+        Scanner in = new Scanner(System.in);    // Объявляем сканер строки
 
-        System.out.println("dlina1: "+ string_array1.length);
-        for (int z=0; z < string_array1.length;z++)
-        {string_array1[z]="Stroka" + Integer.toString(z);
-            System.out.println(string_array1[z]);}
+        while (true) {      // бесконечный цикл
+            System.out.print("Input a name: ");
+            someString = in.nextLine();     // Ожидаем ввод СТРОКИ, пишем его в someString
+            if(someString.contains("stop")) break;  // Если в строке содержится "stop" - выходим из цикла
+            // printf - вывод с маской (%s - подставляет строку someString вместо %s)
+            System.out.printf("Your name: %s \n", someString);
+            someName.add(someString);       // Добавляем введенную строку someString в массив someName
 
+            System.out.printf("Input a oklad: ");
+            int num = in.nextInt(); // Ожидаем ввод ЧИСЛА, пишем его в num
+            System.out.printf("Your oklad: %d \n", num);
+            // printf - вывод с маской (%d - вывод целочисленного значение далее указанной переменной num
+            in.nextLine();      // "Съедаем" ENTER
+            someInts.add(num);  // Добавляем введенное число num в массив someName
+            System.out.print("\n");     // Перевод строки (для визуального отделения)
+            //System.out.println("");     // То же самое
+        }
+
+        in.close();     // закрываем поток "in" - поток ввода (с клавиатуры)
+
+        System.out.println("Prisol naschalnike i vse pereipal");
+        Collections.sort(someInts);     // Сортировка someInts массива по возрастанию
+        Collections.sort(someName, Collections.reverseOrder()); // Сортировка someName массива по возрастанию
+        int i = someInts.size();    // Объявляем переменную i и присваиваем ей РАЗМЕР МАССИВА (сколько элементов)
+        for (int k=0; k < i; k++) {     // Циклом проходим по каждому элементу массивов от 0 до РАЗМЕРА МАССИВА
+            System.out.println(someName.get(k)+" "+someInts.get(k));
+                //массивы - someName и someInts, метод .get(k) - получает k-й элемент массива
+        }
     }
 }
-*/
