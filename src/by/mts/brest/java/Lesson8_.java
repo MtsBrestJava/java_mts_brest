@@ -40,18 +40,18 @@ public class Lesson8_ {
         poditog = (c * a + b)*22;
         poditog = poditog - 74; */
         int poditog;
-        poditog = calcilatePoditog(a, b, c);
+        poditog = calculatePoditog(a, b, c);
 
         System.out.print("poditog = " + poditog + "; ");
         itog = poditog*64 - b%2;
         System.out.println("itog = " + itog);
     }
 
-    public static int calcilatePoditog(int m, int n, int o) {
-        int poditog;
-        poditog = (m * n + o)*22;
-        poditog = poditog - 74;
-        return poditog;
+    public static int calculatePoditog(int m, int n, int o) {
+        int poditog2;
+        poditog2 = (m * n + o)*22;
+        poditog2 = poditog2 - 74;
+        return poditog2;
     }
 
 
