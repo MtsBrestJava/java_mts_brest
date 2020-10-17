@@ -2,7 +2,6 @@ package by.mts.brest.java;
 
 public class Lesson8_ {
 
-
     public static void main(String[] args) {
         int x = 10;
         int y = 20;
@@ -26,17 +25,36 @@ public class Lesson8_ {
         // !!!! Obrabotka i itog #3 с другими данными
         // --/--
 
+        calculateItog(z, y, x);
+        calculateItog(z+5, y+5, x+5);
+        calculateItog(z+5, y+5, x+5);
+
     }
 
-    int calculateItog(int z, int x, int y) {
-        int poditog, itog;
-        poditog = (z * x + y)*22;
+    // ТипВозвращаемогоЗначения НазваниеМетода(передаваемые МЕТОДУ переменные) {
+    //    САМО тело метода
+    // }
+    public static void calculateItog(int a, int b, int c) {
+        int itog;
+/*        int poditog;
+        poditog = (c * a + b)*22;
+        poditog = poditog - 74; */
+        int poditog;
+        poditog = calcilatePoditog(a, b, c);
+
         System.out.print("poditog = " + poditog + "; ");
-        itog = poditog*64 - y%2;
+        itog = poditog*64 - b%2;
         System.out.println("itog = " + itog);
     }
 
-    void
+    public static int calcilatePoditog(int m, int n, int o) {
+        int poditog;
+        poditog = (m * n + o)*22;
+        poditog = poditog - 74;
+        return poditog;
+    }
+
+
 
 
 
