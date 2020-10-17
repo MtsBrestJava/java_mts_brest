@@ -1,6 +1,7 @@
 package by.mts.brest.java;
 
 import java.io.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class Lesson7_readFile {
                 new BufferedReader(new FileReader("C:\\my\\file1.txt"));
         //FileReader reader = new FileReader("C:\\my\\file1.txt");
 
+        // Читаем строки из файла, парсим их и заполняем двумерный массив строк
         ArrayList<List<String>> myStringArray = new ArrayList<List<String>>();
         StringBuilder currentString = new StringBuilder();
         A: for(int x=0;true;x++) {
@@ -34,9 +36,11 @@ public class Lesson7_readFile {
             }
         }
         System.out.println("myStringArray = " + myStringArray);
+        System.out.println("myStringArray = " + myStringArray.get(0));
+        System.out.println("myStringArray = " + myStringArray.get(1));
 
 
-/*        //myStringArray.get(0).get(0);
+        //myStringArray.get(0).get(0);
 
             System.out.println("stroka1 = " + reader.readLine());   // Выводим первую строчку с файла в консоль
             System.out.println("stroka2 = " + reader.readLine());   // ... вторую
@@ -50,6 +54,6 @@ public class Lesson7_readFile {
         FileWriter writer = new FileWriter(name1);
         writer.write("aaaaaa8888"+System.getProperty("line.separator"));   // Записываем в файл строки
         writer.write("333333"+System.getProperty("line.separator"));
-        writer.close();     // Закрываем файл*/
+        writer.close();     // Закрываем файл
     }
 }
