@@ -41,7 +41,6 @@ public class Lesson7_readFile {
 
 
         //myStringArray.get(0).get(0);
-
             System.out.println("stroka1 = " + reader.readLine());   // Выводим первую строчку с файла в консоль
             System.out.println("stroka2 = " + reader.readLine());   // ... вторую
             System.out.println("stroka3 = " + (char)reader.read());   // ... ТОЛЬКО первый символ из третей строки
