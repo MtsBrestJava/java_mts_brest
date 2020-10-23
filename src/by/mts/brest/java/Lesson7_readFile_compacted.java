@@ -38,22 +38,20 @@ public class Lesson7_readFile_compacted {
         }
 
         // Вывод строк ПО  КЛАССИЧЕСКИМ ЦИКЛАМ
-/*      System.out.println("################# Simple for in for #################");
-        for(int i=0; i<myStringArray.size(); i++)
-            for(int j=0; j<myStringArray.get(i).size(); j++)
-                System.out.println(myStringArray.get(i).get(j));*/
+        System.out.println("################# Simple for in for #################");
+            for(int i=0; i<myStringArray.size(); i++)
+                for(int j=0; j<myStringArray.get(i).size(); j++)
+                    System.out.println(myStringArray.get(i).get(j));
 
         // Вывод строк через foreach
-/*      System.out.println("################# foreach #################");
-        for(List<String> bigBoxes:myStringArray)
-            for (String stroka:bigBoxes)
-                System.out.println(stroka);*/
+        System.out.println("################# foreach #################");
+            for(List<String> bigBox:myStringArray)
+                for (String stroka:bigBox)
+                    System.out.println(stroka);
 
         // Вывод строк через ЛЯМБДУ
-        System.out.println("------------------- ВЫВОД \"ОБЫЧНОГО ВАРИАНТА\" -------------------");
+        // System.out.println("------------------- ВЫВОД \"ОБЫЧНОГО ВАРИАНТА\" -------------------");
         myStringArray.forEach(bigBoxes -> bigBoxes.forEach(strings -> System.out.println(strings)));
-
-
 
 
         // ------------------------------------------------------------------------------------------------------------
