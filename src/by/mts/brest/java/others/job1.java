@@ -1,4 +1,4 @@
-package by.mts.brest.java;
+package by.mts.brest.java.others;
 
 import java.awt.*;
 import java.io.*;

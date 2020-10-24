@@ -1,4 +1,4 @@
-package by.mts.brest.java;
+package by.mts.brest.java.others;
 
 public class jobAragoz {
     public static void main(String[] args) {
