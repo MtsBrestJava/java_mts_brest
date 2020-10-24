@@ -1,51 +1,109 @@
 package by.mts.brest.java;
 
+import java.awt.*;
+import java.io.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
+import java.lang.Class;
 
 public class job1 {
-    public static void main(String[] args) {
-        String someString;  // Объявляем строку с именем 'someString'
-        // Объявляем два массива (числовой и строчный)
-        ArrayList<Integer> someInts = new ArrayList<Integer>();
-        ArrayList<String> someName = new ArrayList<String>();
 
-        Scanner in = new Scanner(System.in);    // Объявляем сканер строки
+    public job1() throws FileNotFoundException {
+    }
 
-        while (true) {      // бесконечный цикл
-            System.out.print("Input a name: ");
-            someString = in.nextLine();     // Ожидаем ввод СТРОКИ, пишем его в someString
-            if(someString.contains("stop")) break;  // Если в строке содержится "stop" - выходим из цикла
-            // printf - вывод с маской (%s - подставляет строку someString вместо %s)
-            System.out.printf("Your name: %s \n", someString);
-            someName.add(someString);       // Добавляем введенную строку someString в массив someName
+    public static void main(String[] args) throws IOException {
+        // write your code here
+      ArrayList<List<String>> vvodArray = new ArrayList<List<String>>();
 
-            System.out.printf("Input a oklad: ");
-            int num = 0;
-            while(num < 1) {        // Зарплата не должна быть равна 0 или меньше
-                num = in.nextInt(); // Ожидаем ввод ЧИСЛА, пишем его в num
-                if(num < 1)
-                    System.out.printf("Oklad ne dolzhen byt' <= 0, vvedite oklad: ");
+/*      Scanner in = new Scanner(System.in);
+      int k = 0;
+      while (true) {
+          vvodArray.add(new ArrayList<String>());
+          System.out.print("Input name: ");
+          String tempName = in.nextLine();
+          vvodArray.get(k).add(tempName.toString());
+          System.out.print("Input famile: ");
+          String tempFamile = in.nextLine();
+          vvodArray.get(k).add(tempFamile.toString());
+          while (true) {
+              System.out.print("Input god rogdenia: ");
+              String tempGod = in.nextLine();
+              if (Integer.parseInt(tempGod) > 1900) { vvodArray.get(k).add(tempGod); break; }
+              else System.out.println("Povtorite vvod > 1900");
+          }
+
+          k++;
+          System.out.println("  " + vvodArray);
+          System.out.print("NEXT y/n: ");
+          String exit = in.nextLine();
+          if (exit.contains("n")) break;
+      }
+
+      in.close();*/
+
+      //String nameFile = "C:\\alldostup\\my\\my_" + LocalDate.now().toString() + "\\dz78.txt";
+/*      String nameFile = "C:\\my\\dz78.txt";
+      new File(nameFile).getParentFile().mkdirs();
+      FileWriter writer = new FileWriter(nameFile);
+      writer.write(vvodArray.toString());
+      writer.close();*/
+
+        BufferedReader reader = new BufferedReader(new FileReader("C:\\my\\dz78.txt"));
+        //    (new FileReader("C:\\alldostup\\my\\my_" + LocalDate.now().toString() + "\\dz78.txt"));
+        ArrayList<List<String>> outArray = new ArrayList<List<String>>();
+        outArray.add(new ArrayList<String>());
+        // outArray.add(reader.read());
+
+        File myFile = new File("C:\\my\\dz78.txt");
+        System.out.println("File name: " + myFile.getName());
+        //System.out.println("File name: " + name);
+
+        try (FileInputStream fin = new FileInputStream("C:\\my\\dz78.txt")) {
+            System.out.printf("File size: %d bytes \n", fin.available());
+            StringBuffer znach = new StringBuffer();
+            int q=0;
+            int symbol = reader.read();      //[ [ 1,2,3], [], [] ]
+            //symbol = reader.read();
+            while (symbol!=(int)']'){
+                outArray.add(new ArrayList<String>());
+                for (int i = 0; i < fin.available()-4; i++) {
+                    //System.out.print(i);
+                    while(symbol!=(int)'[') symbol = reader.read();
+                    if(symbol==(int)'[') symbol = reader.read();
+                    while(symbol!=(int)',')
+                    {
+                        symbol = reader.read();
+                        if(symbol!=(int)']') {
+                            znach.append((char)symbol);
+                        }
+                        //System.out.print(znach);
+                            //
+                            //outArray.set(0,) //.add(znach.toString());
+                            //pechat(znach.toString());
+                    }
+                    znach.substring(0, znach.length() - 1);
+                    outArray.get(q).add(i,znach.toString()); // еще убрать запятую
+                    symbol = reader.read();
+
+                    if(symbol==(int)']') break;
+                }
+                q++;
+                pechat(znach.toString());
             }
-            System.out.printf("Your oklad: %d \n", num);
-            // printf - вывод с маской (%d - вывод целочисленного значение далее указанной переменной num
-            in.nextLine();      // "Съедаем" ENTER
-            someInts.add(num);  // Добавляем введенное число num в массив someName
-            System.out.print("\n");     // Перевод строки (для визуального отделения)
-            //System.out.println("");     // То же самое
-        }
 
-        in.close();     // закрываем поток "in" - поток ввода (с клавиатуры)
-
-        System.out.println("Prisol naschalnike i vse pereipal");
-        Collections.sort(someInts);     // Сортировка someInts массива по возрастанию
-        Collections.sort(someName, Collections.reverseOrder()); // Сортировка someName массива по возрастанию
-        int i = someInts.size();    // Объявляем переменную i и присваиваем ей РАЗМЕР МАССИВА (сколько элементов)
-        for (int k=0; k < i; k++) {     // Циклом проходим по каждому элементу массивов от 0 до РАЗМЕРА МАССИВА
-            System.out.println(someName.get(k)+" "+someInts.get(k));
-                //массивы - someName и someInts, метод .get(k) - получает k-й элемент массива
         }
     }
+    public static void pechat (String str) {
+        for (int t = 0; t < 3; t++) {
+            System.out.println("___________________");
+            System.out.print("|" + (str));
+            for (int r = 0; r < 20 - str.length(); r++, System.out.print(" "));
+            System.out.println("|");
+            System.out.println("____________________");
+        }
+        System.out.println("");
+    }
+
 }
