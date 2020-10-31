@@ -6,10 +6,16 @@ import java.util.Comparator;
 public class Lesson9_class2 {
     
     public static void main(String[] args) {
-        Human sasha = new Human();
-        sasha.name = "Sasha L"; sasha.age = 15; sasha.weigth = 65;
+        Human sasha = new Human("Sasha L",15,65);
+        /* sasha.name = "Sasha L";
+        sasha.age = 15;
+        sasha.weigth = 65;*/
+        System.out.println("sasha.weightIndex = " + sasha.weightIndex);
+        
         Human sasha2 = new Human();
-        sasha2.name = "Sasha2 Y"; sasha2.age = 45; sasha2.weigth = 68;
+        sasha2.name = "Sasha2 Y";
+        sasha2.age = 45;
+        sasha2.weigth = 68;
         Human leha = new Human();
         leha.name = "Leha R"; leha.age = 31; leha.weigth = 66;
         Human serega = new Human();
@@ -33,13 +39,13 @@ public class Lesson9_class2 {
     }
 
 
-
     private static void printHumans(ArrayList<Human> listHumans) {
         int i;
         for(i = 0; i< listHumans.size(); i++) {
             System.out.print("Human name: " + listHumans.get(i).name);
             System.out.print("; age: " + listHumans.get(i).age);
             System.out.print("; weight: " + listHumans.get(i).weigth);
+            System.out.println("; weightIndex = " + listHumans.get(i).weightIndex);
             System.out.println("");
         }
 /*        listHumans.forEach(currentHuman -> {
@@ -50,4 +56,6 @@ public class Lesson9_class2 {
         });*/
         System.out.println("------------------------------------");
     }
+
+
 }

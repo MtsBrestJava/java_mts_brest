@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+//sdfdsf
 public class Lesson7_readFile {
     public static void main(String[] args) throws IOException {
 
@@ -12,6 +13,9 @@ public class Lesson7_readFile {
         BufferedReader reader =
                 new BufferedReader(new FileReader("C:\\my\\file1.txt"));
         //FileReader reader = new FileReader("C:\\my\\file1.txt");
+
+        Lesson8_ myObject = new Lesson8_();
+        
 
         // Читаем строки из файла, парсим их и заполняем двумерный массив строк
         ArrayList<List<String>> myStringArray = new ArrayList<List<String>>();
@@ -39,7 +43,7 @@ public class Lesson7_readFile {
         System.out.println("myStringArray = " + myStringArray.get(0));
         System.out.println("myStringArray = " + myStringArray.get(1));
 
-
+//sdfdsfsd
         //myStringArray.get(0).get(0);
             System.out.println("stroka1 = " + reader.readLine());   // Выводим первую строчку с файла в консоль
             System.out.println("stroka2 = " + reader.readLine());   // ... вторую

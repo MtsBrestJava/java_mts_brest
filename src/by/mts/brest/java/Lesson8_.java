@@ -2,6 +2,7 @@ package by.mts.brest.java;
 
 public class Lesson8_ {
 
+
     public static void main(String[] args) {
         int x = 10;
         int y = 20;
@@ -28,6 +29,9 @@ public class Lesson8_ {
         calculateItog(z, y, x);
         calculateItog(z+5, y+5, x+5);
         calculateItog(z+5, y+5, x+5);
+
+        vyvodFIO("Ivaniukovich Siarhei Fiodorovich", 35, 21);
+        vyvodFIO("Ivaniukovich Siarhei Fiodosdfdsfrovich", 355, 214);
 
     }
 
@@ -60,9 +64,14 @@ public class Lesson8_ {
         System.out.println("-------------------");
     }
 
-
-
-
+    public static void vyvodFIO(String fio, int vozrast, int ves) {
+        System.out.println("Dannye cheloveka:");
+        System.out.print("FIO: "+fio);
+        System.out.print(", Vozrast: "+vozrast);
+        System.out.println(", Ves: "+ves);
+        System.out.println("-----------------------");
+        System.out.println("");
+    }
 
 
 }
