@@ -32,13 +32,22 @@ public class Lesson9_class2 {
 
     }
 
+
+
     private static void printHumans(ArrayList<Human> listHumans) {
-        listHumans.forEach(currentHuman -> {
+        int i;
+        for(i = 0; i< listHumans.size(); i++) {
+            System.out.print("Human name: " + listHumans.get(i).name);
+            System.out.print("; age: " + listHumans.get(i).age);
+            System.out.print("; weight: " + listHumans.get(i).weigth);
+            System.out.println("");
+        }
+/*        listHumans.forEach(currentHuman -> {
             System.out.print("currentHuman = " + currentHuman.name);
             System.out.print("; currentHuman.age = " + currentHuman.age);
             System.out.print("; currentHuman.weigth = " + currentHuman.weigth);
             System.out.println("; ");
-        });
+        });*/
         System.out.println("------------------------------------");
     }
 }
