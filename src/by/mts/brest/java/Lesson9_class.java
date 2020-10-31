@@ -6,6 +6,7 @@ public class Lesson9_class {
 
         Human vasya = new Human("Vasilii2");
         //vasya.name = "Vasilii";
+        vasya.riseAge();
         vasya.age = 24;
         vasya.weigth = 72.5f;
 

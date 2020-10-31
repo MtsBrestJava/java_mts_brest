@@ -10,6 +10,7 @@ public class Lesson9_class2 {
         /* sasha.name = "Sasha L";
         sasha.age = 15;
         sasha.weigth = 65;*/
+        sasha.riseAge();
         System.out.println("sasha.weightIndex = " + sasha.weightIndex);
         
         Human sasha2 = new Human();
