@@ -1,4 +1,4 @@
-package by.mts.brest.java;
+package by.mts.brest.java.Lesson9;
 
 public class Lesson9_class {
     public static void main(String[] args) {
