@@ -7,6 +7,8 @@ public class Lesson9_class2 {
     
     public static void main(String[] args) {
         Human sasha = new Human("Sasha L",15,65);
+        Human sergeyIvaniukovich;
+        Human temporaryHuman;
         /* sasha.name = "Sasha L";
         sasha.age = 15;
         sasha.weigth = 65;*/
@@ -23,6 +25,8 @@ public class Lesson9_class2 {
         serega.name = "Serega I"; serega.age = 22; serega.weigth = 69;
         Human ruslan = new Human();
         ruslan.name = "Ruslan O"; ruslan.age = 29; ruslan.weigth = 64;
+
+
 
         ArrayList<Human> mtsHumans = new ArrayList<>();
         mtsHumans.add(sasha);
