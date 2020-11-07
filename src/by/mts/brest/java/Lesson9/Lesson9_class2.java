@@ -1,4 +1,4 @@
-package by.mts.brest.java;
+package by.mts.brest.java.Lesson9;
 
 import java.util.ArrayList;
 import java.util.Comparator;
