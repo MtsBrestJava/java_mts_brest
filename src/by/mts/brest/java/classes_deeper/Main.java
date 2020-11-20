@@ -36,6 +36,10 @@ public class Main {
 
         // Выведем humansCount (количество созданных экземпляров класса Human)
         System.out.println("Human.humansCount = " + Human.humansCount);
+        System.out.println(mtsSaleList.get(0).getClass());
+
+        mtsTech tehnar = new mtsTech("Какой-то", "Инженер");
+        mtsTech.Car someCar = tehnar.new Car();
     }
 
 }
