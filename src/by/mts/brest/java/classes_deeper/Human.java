@@ -15,6 +15,7 @@ public class Human {
     {                                                       // Инициализатор - код, который выполняется ДО любого конструктора при создании ОБЪЕКТА этого КЛАССА
         humansCount++;
         classId = 14;
+        System.out.println("############ Human нициализатор!");
     }
 
 
@@ -48,9 +49,24 @@ public class Human {
 
     private void decreaseWeight() {                         // ТОЖЕ обычный метод класса который что-то там делает, метод доступен для вызова только ВНУТРИ класса (private)
         System.out.println("Метод decreaseWeight()");
-        if(weight > 0)
+        if(weight > 0) {
+            System.out.println("weight = " + this.weight);
             this.weight--;
-        else System.out.println("Вес итак слишком мал!!!");
+            System.out.println("Вес стал " + this.weight + " и уменьшился на 1");
+        }
+        else System.out.println("Вес итак слишком мал: " + this.weight);
+    }
+
+    // Сеттер - назначает(меняет) вес, вызывается извне
+    public void setWeight(int weight) {
+        if(weight > 0)
+            this.weight = weight;
+        else this.weight = 1;
+    }
+
+    // Геттер - отдаёт вес, вызывается извне
+    public int getWeight() {
+        return this.weight;
     }
 
     @Override
