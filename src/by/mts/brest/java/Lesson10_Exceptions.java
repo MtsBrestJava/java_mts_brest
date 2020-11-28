@@ -11,6 +11,8 @@ public class Lesson10_Exceptions {
 
         // Читаем файл (можно простым FileReader, но тогда файл посимвольно читается)
         try {
+            // if(.. файлик есть) .. else НАПЕЧАТАТЬ_ОШИБКУ
+            // if(.. файлика нету) .. else НАПЕЧАТАТЬ_ОШИБКУ
             BufferedReader reader =
                     new BufferedReader(new FileReader("C:\\my\\file122.txt"));
             System.out.println("reader.readLine() = " + reader.readLine());
@@ -18,25 +20,23 @@ public class Lesson10_Exceptions {
         }
         catch(Exception exc) {
             // System.out.println("BufferedReader exception: " + exc);
-            System.out.println("Не найден файл или произошла ошибка чтения");
+            System.out.println("Что-то пошло не так: ");
+            System.out.println(exc.getMessage());
         }
-        finally {
-            //
-        }
+        // ---------------------------------------------------------------------------
 
 
         System.out.println("Какое-нить действие 1");
 
         int b = 2;
         b = 2+3 - 5;
+        // if(b != 0 || B != 3 || b != 99) { int a = 2 / b; ....... }
+        // if(b != 3) { int a = 2 / b; ....... }
+        // if(b != 99) { int a = 2 / b; ....... }
+        // if(b != -1) { int a = 2 / b; ....... }
         try {
             int a = 2 / b;
-            // ..
-            // ..
-            int[] arrayInts = new int[25];
-            arrayInts[1] = 5;
-
-
+            //....
         }
         catch (ArithmeticException ddd) {
            // System.out.println("ddd = " + ddd);
@@ -48,6 +48,7 @@ public class Lesson10_Exceptions {
 
         }
 
+        // ----------------------------------------------
 
         int[] digits = {33,6,7,8,9};
         // ...
