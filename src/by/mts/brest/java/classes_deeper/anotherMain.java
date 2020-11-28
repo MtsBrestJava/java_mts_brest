@@ -6,6 +6,9 @@ public class anotherMain {
  Human sasha = new Human("Sasha","Levchenko");
  Human petya = new Human();
 
+
+
+
         sasha.surname = "Tehnar";
         sasha.age = 22;
         sasha.Human();
@@ -13,12 +16,9 @@ public class anotherMain {
         sasha.doDiet();
         System.out.println(sasha.humansCount); //2
 
-        System.out.println(Human.humansCount); //2
-        System.out.println(Human.humansCount); //2
-        Human igor = new Human();
-        System.out.println(igor.humansCount); //3
-        System.out.println(Human.humansCount); //3
+        System.out.println(sasha.toString());
+        System.out.println("Human{ name = ...");
 
-        System.out.println(sasha.classId);
+
     }
 }
