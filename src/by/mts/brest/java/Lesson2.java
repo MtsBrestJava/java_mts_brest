@@ -1,6 +1,7 @@
 package by.mts.brest.java;
 
 public class Lesson2 {
+        ///ffffffff
 public static void main(String[] args) {
 /*       ==  - сравнение двух значений РАВНЫ ЛИ
          !=  - сравнеине значений НЕ РАВНЫ ЛИ
