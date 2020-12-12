@@ -1,6 +1,6 @@
 package by.mts.brest.java;
 public class Lesson1 {
-    ///ffffdfgfdg
+    ///ffffdfgfdg9999999999
     public static void main(String[] args) {
         int x = 10;
         int y = 20;
