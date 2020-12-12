@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class Lesson5_ArrayList {
+    ///dfgfdg
     public static void main(String[] args) {
 
         // Список<типДанных> ИмяСписка = new Список<типДанных>()

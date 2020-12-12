@@ -1,6 +1,7 @@
 package by.mts.brest.java.Lesson9;
 
 public class Lesson9_class {
+    ///dsd
     public static void main(String[] args) {
       // Тип-Human  любоеИмя = СОЗДАНИЕ ОБЪЕКТА С ИМЕНЕМ "любоеИмя" от класса Human
 
