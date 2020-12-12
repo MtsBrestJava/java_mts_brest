@@ -1,6 +1,7 @@
 package by.mts.brest.java;
 
 public class Lesson3 {
+    //3333333333333333333
     public static void main(String[] args) {
 
         int i;
