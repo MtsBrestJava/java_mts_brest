@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Lesson4 {
+    // 4444444444444
     public static void main(String[] args) {
 
         int nash_massive0[];
