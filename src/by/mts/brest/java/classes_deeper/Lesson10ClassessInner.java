@@ -3,7 +3,7 @@ package by.mts.brest.java.classes_deeper;
 public class Lesson10ClassessInner{
 
     public static void main(String[] args) {
-
+//
         Person tom = new Person("Tom", "qwerty");
         tom.displayPerson();
         tom.account.displayAccount();
