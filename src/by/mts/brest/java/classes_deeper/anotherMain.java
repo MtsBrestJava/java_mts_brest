@@ -6,7 +6,8 @@ public class anotherMain {
  Human sasha = new Human("Sasha","Levchenko");
  Human petya = new Human();
 
-
+        ///dsfsdfdsf
+        //sdfdsfdsfsdfdsfdsfdsf
 
 
         sasha.surname = "Tehnar";

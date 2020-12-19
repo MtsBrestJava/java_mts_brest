@@ -2,7 +2,7 @@ package by.mts.brest.java.classes_deeper;
 
 public class another2Main {
     public static void main(String[] args) {
-
+        // testsetset
         Human leha = new Human(33);
 
         //leha.decreaseWeight();
