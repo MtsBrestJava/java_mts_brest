@@ -10,6 +10,8 @@ public class Main {
         // Создадим два объекта класса Human используя разные конструкторы
         Human abonentIgor = new Human();
         Human podryadchikPetya = new Human("Petr", "Ivanov");
+        mtsSale someMts = new mtsSale(1,2);
+
         // Выведем их на экран:
         System.out.println("abonentIgor = " + abonentIgor);
         System.out.println("podryadchikPetya = " + podryadchikPetya);

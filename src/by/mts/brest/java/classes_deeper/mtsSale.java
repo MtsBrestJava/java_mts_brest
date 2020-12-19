@@ -15,6 +15,9 @@ public class mtsSale extends Human {
         System.out.println("Конструктор mtsSale(String, String)");
     }
 
+    public mtsSale(int a, int b) {
+        //
+    }
 
     @Override
     public String toString() {
