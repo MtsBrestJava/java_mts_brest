@@ -8,9 +8,9 @@
 ##
 #### Домашка к 19.12.20:
 [![Generic badge](https://img.shields.io/badge/gon-репозиторий_на_гите-green.svg)](https://github.com/MtsBrestJava/gon/)\
-[![Generic badge](https://img.shields.io/badge/lev-репозиторий_на_гите-orange.svg)](https://github.com/MtsBrestJava/lev/)\
-[![Generic badge](https://img.shields.io/badge/ost-репозиторий_на_гите-orange.svg)](https://github.com/MtsBrestJava/ost/)\
-[![Generic badge](https://img.shields.io/badge/rag-репозиторий_на_гите-orange.svg)](https://github.com/MtsBrestJava/rag/)\
+[![Generic badge](https://img.shields.io/badge/lev-репозиторий_на_гите-green.svg)](https://github.com/MtsBrestJava/lev/)\
+[![Generic badge](https://img.shields.io/badge/ost-репозиторий_на_гите-green.svg)](https://github.com/MtsBrestJava/ost/)\
+[![Generic badge](https://img.shields.io/badge/rag-репозиторий_на_гите-green.svg)](https://github.com/MtsBrestJava/rag/)\
 [![Generic badge](https://img.shields.io/badge/yak-репозиторий_на_гите-green.svg)](https://github.com/MtsBrestJava/yak/)
 
 
