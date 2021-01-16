@@ -5,7 +5,6 @@ import by.mts.brest.java.classes_deeper.Human;
 public class ConcurrencyOne {
     public static void main(String[] args) throws InterruptedException {
 
-        //Thread threadOne = new Thread();
         //MyThread firstThread = new MyThread(1);
         //MyThread secondThread = new MyThread(2);
         Thread runnedFirstThread = new Thread(new MyRunner(1));
@@ -19,6 +18,13 @@ public class ConcurrencyOne {
         System.out.println("Main ends");
     }
 }
+
+/*Human {fio, age, weight;}
+class MtsSale extends Human, HumanClass {          // run()
+    String fio
+}
+class MtsSale2 extends Human implements HumanInterface {   // run()
+}*/
 
 class MyRunner implements Runnable {
     int index;
@@ -39,7 +45,7 @@ class MyRunner implements Runnable {
     }
 }
 
-class MyThread extends Thread {
+/*class MyThread extends Thread {
     int index;
     public MyThread(int index) {
         this.index = index;
@@ -56,4 +62,4 @@ class MyThread extends Thread {
             System.out.println("T #"+index+" i = " + i);
         }
     }
-}
+}*/
