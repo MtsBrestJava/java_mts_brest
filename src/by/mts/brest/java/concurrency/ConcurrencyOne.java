@@ -11,11 +11,15 @@ public class ConcurrencyOne {
         Thread runnedSecondThread = new Thread(new MyRunner(2));
         System.out.println("Main started");
         //firstThread.start();
+        System.out.println("First thread running");
         runnedFirstThread.start();
-        System.out.println("First thread runned");
+        runnedFirstThread.join();
+        System.out.println("First thread finished");
         //secondThread.start();
         runnedSecondThread.start();
+        runnedSecondThread.join();
         System.out.println("Main ends");
+        //
     }
 }
 
@@ -34,12 +38,7 @@ class MyRunner implements Runnable {
 
     @Override
     public void run() {
-        for(int i = 0; i < 500; i++){
-            try {
-                Thread.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        for(int i = 0; i < 100; i++){
             System.out.println("T #"+index+" i = " + i);
         }
     }

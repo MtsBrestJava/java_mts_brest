@@ -1,6 +1,9 @@
 package by.mts.brest.java.concurrency;
 
 public class ConcurrencyTwo {
+
+    public static int a;
+
     public static void main(String[] args) throws InterruptedException {
 
         Thread myFirstRunnableThread = new Thread(new Runnable() {
@@ -28,4 +31,5 @@ public class ConcurrencyTwo {
         System.out.println("mySecondRunnableThread runned");
         System.out.println("End of program");
     }
+
 }
