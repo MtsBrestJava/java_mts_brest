@@ -6,13 +6,36 @@ public class ConcurrencyOne {
     public static void main(String[] args) throws InterruptedException {
 
         //Thread threadOne = new Thread();
-        MyThread firstThread = new MyThread(1);
-        MyThread2 secondThread = new MyThread2(2);
+        //MyThread firstThread = new MyThread(1);
+        //MyThread secondThread = new MyThread(2);
+        Thread runnedFirstThread = new Thread(new MyRunner(1));
+        Thread runnedSecondThread = new Thread(new MyRunner(2));
         System.out.println("Main started");
-        firstThread.start();
+        //firstThread.start();
+        runnedFirstThread.start();
         System.out.println("First thread runned");
-        secondThread.start();
+        //secondThread.start();
+        runnedSecondThread.start();
         System.out.println("Main ends");
+    }
+}
+
+class MyRunner implements Runnable {
+    int index;
+    public MyRunner(int index) {
+        this.index = index;
+    }
+
+    @Override
+    public void run() {
+        for(int i = 0; i < 500; i++){
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("T #"+index+" i = " + i);
+        }
     }
 }
 
@@ -30,23 +53,6 @@ class MyThread extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("T #"+index+" i = " + i);
-        }
-    }
-}
-
-class MyThread2 extends Thread {
-    int index;
-    public MyThread2(int index) {
-        this.index = index;
-    }
-
-    @Override
-    public void run() {
-        for(int i = 0; i < 500; i++){
-            try {
-                Thread.sleep(2);
-            } catch (Exception e) {}
             System.out.println("T #"+index+" i = " + i);
         }
     }
